@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joadson Rocha • Desenvolvedor Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #6c63ff;
+      --primary-dark: #564ecc;
+      --accent: #ff6584;
+      --bg: #0f0c29;
+      --card-bg: #1a172e;
+      --text: #f8f9ff;
+      --text-muted: #b0a9d2;
+      --border: #2a2742;
+    }
+
+    body {
+      background: linear-gradient(180deg, var(--bg), #1a172e);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      padding: 80px 0 40px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid var(--primary);
+      margin: 0 auto 24px;
+      background: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      background: linear-gradient(to right, #fff, #a0a0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1.4rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(108, 99, 255, 0.2);
+      color: #b8b8ff;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      margin: 0 4px 8px;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+      color: white;
+    }
+
+    /* ===== PROJETOS ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      border-color: var(--primary);
+    }
+
+    .project-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    .project-card p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+
+    .tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tech span {
+      background: rgba(255, 255, 255, 0.1);
+      color: #a0a0ff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: scale(1.03);
+    }
+
+    /* ===== CONTATO ===== */
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+
+    .contact-link:hover {
+      color: var(--primary);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.4rem; }
+      .subtitle { font-size: 1.1rem; }
+      .section-title { font-size: 1.8rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="avatar">JR</div>
+      <h1>Joadson Rocha</h1>
+      <p class="subtitle">Desenvolvedor Web • Formado em Gestão em TI • Apaixonado por open source</p>
+      
+      <div>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">React</span>
+        <span class="tag">Electron</span>
+        <span class="tag">Node.js</span>
+      </div>
+
+      <div class="contact-links">
+        <a href="https://github.com/joadsonrocha" target="_blank" class="contact-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/joadson-rocha" target="_blank" class="contact-link">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://instagram.com/rochajoadson" target="_blank" class="contact-link">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://leving.com.br" target="_blank" class="contact-link">
+          <i class="fas fa-globe"></i> Leving.com.br
+        </a>
+      </div>
+    </header>
+
+    <!-- Projetos -->
+    <section>
+      <h2 class="section-title">Meus Projetos</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>MediaFinder</h3>
+          <p>Aplicativo desktop para organizar e assistir vídeos locais com busca inteligente e capas automáticas.</p>
+          <div class="tech">
+            <span>Electron</span>
+            <span>FFmpeg</span>
+            <span>JavaScript</span>
+          </div>
+          <a href="https://github.com/joadsonrocha" class="btn">Ver no GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Feira em Casa</h3>
+          <p>Marketplace para compra de produtos de feira diretamente de produtores locais.</p>
+          <div class="tech">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Tailwind CSS</span>
+          </div>
+          <a href="https://github.com/joadsonrocha" class="btn">Ver no GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>YouTube Downloader</h3>
+          <p>Aplicativo desktop para download de vídeos do YouTube com interface amigável.</p>
+          <div class="tech">
+            <span>Electron</span>
+            <span>yt-dlp</span>
+            <span>React</span>
+          </div>
+          <a href="https://github.com/joadsonrocha" class="btn">Ver no GitHub</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Joadson Rocha — Desenvolvedor Web • Boa Vista - RR</p>
+  </footer>
+
+  <script>
+    // Animação suave ao carregar
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach((card, i) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.5s, transform 0.5s';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 300 + i * 200);
+      });
+    });
+  </script>
+</body>
+</html>
+
